@@ -6,10 +6,8 @@
       <class name="testCases.Search_Google_Page">
         <methods>
           <include name="beforeTest"/>
-          <include name="loginfacebookPage"/>
           <include name="enterText"/>
           <include name="afterTest"/>
-          <include name="accessFacebook"/>
         </methods>
       </class> <!-- testCases.Search_Google_Page -->
     </classes>

@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.devtools.v108.log.Log;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -20,7 +21,9 @@ public class Search_Google_Page {
 	public void beforeTest()
 	{
 		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+		driver = new ChromeDriver(options);
 		driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
 		
 		driver.get("https://www.google.com/");
