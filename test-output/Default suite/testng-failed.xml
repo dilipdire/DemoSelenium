@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.Search_Google_Page">
+      <class name="base.FacebookLoginWith_Excel">
         <methods>
-          <include name="beforeTest"/>
-          <include name="enterText"/>
-          <include name="afterTest"/>
+          <include name="tearDown"/>
+          <include name="readData"/>
+          <include name="login_with_Excel"/>
         </methods>
-      </class> <!-- testCases.Search_Google_Page -->
+      </class> <!-- base.FacebookLoginWith_Excel -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
